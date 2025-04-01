@@ -1,4 +1,4 @@
-namespace workflow_kubernetes
+namespace workflow_kubernetes.Models
 {
     public class WeatherForecast
     {
