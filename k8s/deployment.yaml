@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workflow-kubernetes-deployment
+spec:
+  replicas: 3  # Puedes cambiar esto según cuántas réplicas necesites
+  selector:
+    matchLabels:
+      app: workflow-kubernetes
+  template:
+    metadata:
+      labels:
+        app: workflow-kubernetes
+    spec:
+      containers:
+        - name: workflow-kubernetes
+          image: workflow-kubernetes:latest  # La imagen que construiste
+          ports:
+            - containerPort: 8080
